@@ -33,3 +33,50 @@ $(document).ready(function(){
 </script>
 </body>
 </html>
+/////////////////////////////////////////////////////Delete Idea ///////////////////////////
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+
+<h1 class="dd">You Want to delete This Text !</h1>
+<br>
+<hr>
+<button class="hr">Delete</button>
+
+</body>
+
+
+<script>
+
+ window.addEventListener('load',function(){
+$(document).ready(function(){
+$(".hr").click(function(){
+ swal({
+  title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this Text file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Poof! Your Text file has been deleted!", {
+      icon: "success",
+    });
+    $('.dd').remove();
+  } else {
+    swal("Your Text file is safe!");
+  }
+});
+
+//====================
+});
+});
+});
+
+</script>
+</html>
